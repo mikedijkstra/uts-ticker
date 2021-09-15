@@ -1,6 +1,7 @@
 import React from "react";
 import Ticker from "react-ticker";
 import './ticker.css';
+import './button.css';
 // import { useTextWidth } from '@imagemarker/use-text-width';
 import headlinesText from './headlines';
 
@@ -32,6 +33,7 @@ function NewsTicker() {
 
     console.log(_offset);
     return (
+        <div>
         <Ticker speed={_speed} offset={0}>
             {() => (
                 <>
@@ -41,6 +43,9 @@ function NewsTicker() {
                 </>
             )}
         </Ticker>
+        {/* INSERT MROUTING PATH FOR LINK TO INFO BELOW - href */}
+        <div className="linkButton"><a href="">info</a></div>
+        </div>
     );
 }
 
