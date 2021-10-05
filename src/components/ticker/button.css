@@ -1,9 +1,10 @@
 .linkButton{
+    background-color: darkred;
+    color: black;
     position: absolute;
     right: 0;
     top: 0;
     line-height: 3em;
-    background-color:white;
     /*  clockwise from top - top right bottom left*/ 
     padding: 0 0.25em 0 0.25em; 
 }

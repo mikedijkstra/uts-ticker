@@ -1,4 +1,5 @@
-import NewsTicker from './components/ticker';
+import NewsTicker from './components/ticker/ticker';
+import About from './components/info/info'
 import React from 'react';
 import {
   BrowserRouter as Router,
@@ -20,14 +21,6 @@ function App() {
    </Switch>
  </div>
 </Router>
-  );
-}
-
-function About() {
-  return (
-    <div>
-      <h2>About MoB</h2>
-    </div>
   );
 }
 
