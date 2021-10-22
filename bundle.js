@@ -117,8 +117,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function NewsTicker() {
-  // const fullTextWidth = useTextWidth({text: headlinesText, font: '3em monospace'});
-  var fullTextWidth = 9845793475; // this is async it seems - will be easiest to calculate value of this once when final text file is ready
+  var fullTextWidth = useTextWidth({
+    text: _headlines__WEBPACK_IMPORTED_MODULE_4__["default"],
+    font: '3em monospace'
+  }); // const fullTextWidth = 9845793475;
+  // this is async it seems - will be easiest to calculate value of this once when final text file is ready
   // then include as hardcoded var as shown aove
   // this calculation gets offset as a per-character scaled number
 
@@ -132,11 +135,8 @@ function NewsTicker() {
 
   var _offset = _speed * (timeStamp - startTime) * charWidth * -1;
 
-  console.log("charCount: " + charCount);
   console.log("FullTextWidth: " + fullTextWidth);
-  console.log("charWidth: " + charWidth);
-  console.log("offset: " + _offset);
-  console.log("NOW TIME: " + timeStamp);
+  console.log("NOW TIME: " + startTime);
   console.log(_offset);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_ticker__WEBPACK_IMPORTED_MODULE_1__["default"], {
     speed: _speed,
