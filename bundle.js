@@ -174,11 +174,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function NewsTicker() {
-  var fullTextWidth = (0,_imagemarker_use_text_width__WEBPACK_IMPORTED_MODULE_4__.useTextWidth)({
-    text: _headlines__WEBPACK_IMPORTED_MODULE_5__["default"],
-    font: '3em monospace'
-  }); // const fullTextWidth = 9845793475;
-  // this is async it seems - will be easiest to calculate value of this once when final text file is ready
+  // const fullTextWidth = useTextWidth({text: headlinesText, font: '3em monospace'});
+  var fullTextWidth = 330013.25; // this is async it seems - will be easiest to calculate value of this once when final text file is ready
   // then include as hardcoded var as shown aove
   // this calculation gets offset as a per-character scaled number
 
@@ -186,14 +183,15 @@ function NewsTicker() {
   var charWidth = fullTextWidth / charCount;
   var _speed = 5; // will need to set this as literal time when ticker goes live
   // currently is set to have started 30 seconds ago
+  // const startTime = Date.now();
 
-  var startTime = Date.now();
+  var startTime = 1634888989440;
   var timeStamp = Date.now();
 
-  var _offset = _speed * (timeStamp - startTime) * charWidth * -1;
+  var _offset = _speed * (timeStamp - startTime) * charWidth * -1; // console.log("FullTextWidth: " + fullTextWidth);
+  // console.log("NOW TIME: " + startTime);
 
-  console.log("FullTextWidth: " + fullTextWidth);
-  console.log("NOW TIME: " + startTime);
+
   console.log(_offset);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_ticker__WEBPACK_IMPORTED_MODULE_1__["default"], {
     speed: _speed,
