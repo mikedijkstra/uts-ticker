@@ -2,7 +2,7 @@ import React from "react";
 import Ticker from "react-ticker";
 import './ticker.css';
 import './button.css';
-// import { useTextWidth } from '@imagemarker/use-text-width';
+import { useTextWidth } from '@imagemarker/use-text-width';
 import headlinesText from './headlines';
 import {
     Link
