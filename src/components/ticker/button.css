@@ -1,10 +1,16 @@
 .linkButton{
-    background-color: darkred;
+    font-family: 'VT323', monospace;
+	font-size: 1.0em;
+	background-color: darkred;
     color: black;
-    position: absolute;
+	position: absolute;
     right: 0;
     top: 0;
     line-height: 3em;
     /*  clockwise from top - top right bottom left*/ 
     padding: 0 0.25em 0 0.25em; 
 }
+
+a, a:visited { color: black; }
+	a:hover { color: red; }
+	
