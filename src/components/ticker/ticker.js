@@ -20,7 +20,7 @@ function NewsTicker() {
     const charCount = headlinesText.length;
     const charWidth = fullTextWidth / charCount;
 
-    const _speed = 5;
+    const _speed = 8;
 
     // will need to set this as literal time when ticker goes live
     // currently is set to have started 30 seconds ago
