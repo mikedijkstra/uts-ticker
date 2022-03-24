@@ -2,8 +2,8 @@
 const delimiter = "  //  ";
 
 const headlinesText = `Facebook admits that most people are bots
-#Luxury, #Technology, #Billionaires, #Retirement, #Diversity
-NFT’s the new refrigerated coke
+#Luxury #Technology #Billionaires #Retirement #Diversity
+NFTs the new refrigerated coke
 Military AI drone network hacked by 15 year old
 "I can't believe this is real life”
 Australian government invests in deepfake AI research lab
