@@ -184,7 +184,7 @@ function NewsTicker() {
 
   var charCount = _headlines__WEBPACK_IMPORTED_MODULE_5__["default"].length;
   var charWidth = fullTextWidth / charCount;
-  var _speed = 5; // will need to set this as literal time when ticker goes live
+  var _speed = 8; // will need to set this as literal time when ticker goes live
   // currently is set to have started 30 seconds ago
 
   var startTime = Date.now();

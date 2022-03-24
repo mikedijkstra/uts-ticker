@@ -1,11 +1,23 @@
 // Set to change symbol that intervenes between headlines
 const delimiter = "  //  ";
 
-const headlinesText = `OLD ARCHIVES FILLED WITH RECORDS OF USED IDENTITIES DISCOVERED TO BE MISSING AFTER NEBULA TRANSFER. A team of researchers has managed to find data relating to the identities of nearly 14,000 people who were removed from a galactic database following the transfer of their corporeal bodies to Nebula. The lost data indicates that most of these identities were never used by their respective owners.
-SPACE CAPITALISM SENDS THE STOCK MARKET INTO A VOLATILE FREEFALL. On Wednesday, SpaceX’s “Falcon Heavy”, the most powerful operational rocket on Earth, blasted off from Kennedy Space Centre. The rocket quickly became the talk of the day on the stock market. Its market capitalization grew by $5 billion, soaring to a value of $49 billion in 10 minutes. Just 3 days earlier, ULA had canceled an $11 billion contract with SpaceX, alleging it had “lost significant cost and performance advantages in the American launch vehicle market,” according to a statement posted on ULA’s official twitter account. On Wall Street, the statement caused ULA shares to plummet 15% on Thursday. Shares of SpaceX soared 10% on the same day.
-"IF YOU WANT TO WORK WITH PEOPLE, YOU HAVE TO GET USED TO THE IDEA THAT YOU MIGHT NOT GET PAID FOR IT.” In a media presentation last night, the head of the Union for Human, Hybrid and Generated Workers (UHHGW), Ostrid Seven, put what some say is the nail in the coffin for human-to-human service industries. The sector has been in serious decline over the last decade, and it seems that any expectation of an industry that is run entirely by humans for humans is unaffordable, inefficient and discriminatory. Although there are few industries that still run solely human-to-human, they take up disproportionate communal resources, according to Seven, to account for slower task processing and human error. They also emphasised the discriminatory exclusion of more than half the world’s population that these workplace pracatices represent.
-INTO THE FUTURE: PLANS FOR INTERPLANETARY HIGHWAY UNDER REVIEW. As the Eura Union ponders future transport proposals in space, one ambitious concept is being discussed. Dubbed the 'Eura Space Highway' (esh), this would be the first completely non-geosynchronous orbital highway. If the proposal is accepted, it could pave the way for private firms to operate more effectively in space and also provide an express link to Earth’s Moon and Mars. Norman Gaiger, Member of the Parliament’s Committee on the Space Programme and Related Matters, and lead rapporteur on esh says, "Using the existing Ariane 5 rocket and Eutelsat's Airbus satellite fleet as launch vehicles, the proposal would use low-cost, lightweight boosters similar to those being developed for proposed LEO orbiting station stations.”
-CRYPTOCURRENCIES CRASH, BRINGS AUSTRALIA TO ITS KNEES, FORCES LLLIBERAL PRIME MINISTER TO SELL HAWAIIAN MANSION. An otherwise pleasant Monday morning in the Central Business District, sweaty traders in suits they probably slept in piled out of their classic roadsters. David walked through the sliding doors, slightly cringing at the piercing squeal of the plastic door pulling itself open. Shocked, and usually placated by the array of various coin names on the main screen inside - Doge, Safemoon, Ethereum and the like - and the numbers that regular, non-traders simply couldn’t understand, David was floored. The crowd was simply standing, staring, as each coin’s value, beside its name, carried the one symbol that they dared not speak of: the ‘-’. Every coin, every single coin was now a debt.`;
+const headlinesText = `Facebook admits that most people are bots
+#Luxury, #Technology, #Billionaires, #Retirement, #Diversity
+NFT’s the new refrigerated coke
+Military AI drone network hacked by 15 year old
+"I can't believe this is real life”
+Australian government invests in deepfake AI research lab
+An end to war? AI researcher says "war is obsolete"  as country pledges its allegiance to technology 
+Transhumanism: The movement that will save the world
+3 grams of ART selling on the low (no tax included)
+3D Stem Cell New Vegan Pork Meat
+WhY HumAn intervEntion in EleCtions is a ~TeRrible IdeA~ and should absolutely be banned 100 percent
+My dealer dropped off a few bags of Picasso Originals
+How to be Techlingual: The Javascript Revolution
+#1st! #f1rst #first #phirst
+AI protest for sentient recognition in unions
+GOD AI creates the digital cult, offers NFTs to followers, human and robot alike
+“Brilliant…” High school prodigy produces metaverse underground music festival`;
 
 // The second 2 replace all's get some wierd utf-8 misnomers that fuck up how single quotes are displayed
 export default headlinesText.replaceAll("\n", delimiter).replaceAll("&#8216;", "'").replaceAll("&#8217;", "'");
