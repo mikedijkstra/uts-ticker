@@ -1,4 +1,5 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const webpack = require('webpack');
 
 module.exports = {
     "mode": "development",
@@ -49,6 +50,9 @@ module.exports = {
         new HtmlWebPackPlugin({
             template: "./src/index.html",
             filename: "./index.html"
-        })
+        }),
+        new webpack.DefinePlugin({
+            START_TIME: Date.now(),
+          })
     ]
 }
