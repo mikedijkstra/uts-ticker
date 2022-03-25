@@ -1,8 +1,7 @@
-import React from "react";
+import React, { useLayoutEffect, useState } from "react";
 import Ticker from "react-ticker";
 import './ticker.css';
 import './button.css';
-import { useTextWidth } from '@imagemarker/use-text-width';
 import headlinesText from './headlines';
 import {
     Link
@@ -11,31 +10,24 @@ import {
 
 
 function NewsTicker() {
-    const fullTextWidth = useTextWidth({text: headlinesText, font: '3em monospace'});
-    // const fullTextWidth = 9845793475;
-    // this is async it seems - will be easiest to calculate value of this once when final text file is ready
-    // then include as hardcoded var as shown aove
-
-    // this calculation gets offset as a per-character scaled number
-    const charCount = headlinesText.length;
-    const charWidth = fullTextWidth / charCount;
+    const [offset, setOffset] = useState(0)
+    const [move, setMove] = useState(false)
 
     const _speed = 8;
 
-    // will need to set this as literal time when ticker goes live
-    // currently is set to have started 30 seconds ago
-    const startTime = Date.now();
+    useLayoutEffect(() => {
+        const pixelsPerSecond = 82.6758
+        /* eslint-disable-next-line */
+        const startTime = START_TIME || Date.now();
+        const timeStamp = Date.now();
+        const offset = pixelsPerSecond * ((timeStamp - startTime) / 1000);
+        setOffset(offset)
+        setMove(true)
+    }, [])
 
-    const timeStamp = Date.now();
-    const _offset = _speed * (timeStamp - startTime) * charWidth * -1;
-
-    console.log("FullTextWidth: " + fullTextWidth);
-    console.log("NOW TIME: " + startTime);
-    
-    console.log(_offset);
     return (
         <div>
-        <Ticker speed={_speed} offset={0}>
+        {move ? <Ticker speed={_speed} offset={-offset} move={move}>
             {() => (
                 <>
                     <div className="mainTicker">
@@ -43,7 +35,7 @@ function NewsTicker() {
                     </div>
                 </>
             )}
-        </Ticker>
+        </Ticker> : null }
         {/* INSERT MROUTING PATH FOR LINK TO INFO BELOW - href */}
         <div className="linkButton"><Link to="/about">About</Link></div>
         </div>
